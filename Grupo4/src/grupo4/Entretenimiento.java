@@ -5,6 +5,7 @@
 package grupo4;
 
 import java.util.ArrayList;
+import java.util.Scanner; 
 
 /**
  *
@@ -18,6 +19,8 @@ public class Entretenimiento {
   private String plataforma; 
   private ArrayList<String>patrocinador;
   
+  public Scanner scanner; 
+  
   public Entretenimiento(String titulo, int audiencia, String empresa, double critica, String plataforma){
       this.titulo=titulo; 
       this.audiencia=audiencia; 
@@ -26,7 +29,51 @@ public class Entretenimiento {
       this.plataforma=plataforma; 
       this.patrocinador=new ArrayList<>(); 
   }
+  
+  public void mostrarInformacion(){
+      System.out.println("Titulo: " + titulo + ",Audiencia: " + audiencia + ",Empresa: " + empresa + ",Crítica: " + critica + ",Plataforma: "+plataforma + ",Patrocinadores: "+patrocinador);
+  }
+  
+  public double mostrarCritica(){
+      return critica;
+  }
+  
+  public void agregarPatrocinador(String agregarP){
+       scanner = new Scanner(System.in);
+      System.out.println("Introduzca el nombre del patrocinador que quiera agregar: ");
+      agregarP=scanner.nextLine(); 
+      patrocinador.add(agregarP); 
+      
+  }
+  
+  public void mostrarPatrocinadores(){
+      System.out.println("Patrocinadores:");
+      System.out.println();
+      System.out.println("-------------------------------------------------------------------------");
+      for (int i = 0; i < patrocinador.size(); i++) {
+System.out.println("Posición " + i + " ? " + patrocinador.get(i));
+      }
+  }
+  
+    public void eliminarPatrocinador(int posicion) {
+         scanner = new Scanner(System.in);
+        if (patrocinador.isEmpty()) {
+            System.out.println("No hay patrocinadores para eliminar.");
+            return;
+        }
+        mostrarPatrocinadores();
+        System.out.println("Elija el número del patrocinador que desea eliminar:");
+         posicion = scanner.nextInt();
+        if (posicion >= 0 && posicion < patrocinador.size()) {
+            patrocinador.remove(posicion);
+            System.out.println("Patrocinador eliminado correctamente.");
+        } else {
+            System.out.println("Posición no válida.");
+        }
+        
+  }
 }
+  
 
 
 
