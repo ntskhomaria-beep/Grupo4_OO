@@ -44,8 +44,7 @@ public class Peliculas extends Entretenimiento{
     }
     
     public String toString(){
-        
-        return "Nombre: " + this.titulo + "\nAudiencia: " + this.audiencia + "\nDueÃ±os: " + this.empresa + "\nValoracion: " + this.valoracion + 
+                return "Nombre: " + this.titulo + "\nAudiencia: " + this.audiencia + "\nDueños: " + this.empresa + "\nValoracion: " + this.valoracion + 
                 "\nPlataforma: " + this.plataforma + "\nPatrocinadores: " + this.patrocinador + "\nActores: " + this.actores + "\nDuracion: " + this.duracion + 
                 "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis + "\nUbicacion: " + this.sinopsis;
     }
