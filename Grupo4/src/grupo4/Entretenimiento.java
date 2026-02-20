@@ -17,6 +17,15 @@ public class Entretenimiento {
   private double critica; 
   private String plataforma; 
   private ArrayList<String>patrocinador;
+  
+  public Entretenimiento(String titulo, int audiencia, String empresa, double critica, String plataforma){
+      this.titulo=titulo; 
+      this.audiencia=audiencia; 
+      this.empresa=empresa;
+      this.critica=critica; 
+      this.plataforma=plataforma; 
+      this.patrocinador=new ArrayList<>(); 
+  }
 }
 
 
