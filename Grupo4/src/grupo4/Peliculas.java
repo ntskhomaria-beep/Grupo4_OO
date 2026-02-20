@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import java.time.Month;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -23,8 +24,8 @@ public class Peliculas extends Entretenimiento{
     private Actores[] actor;
     int n = 0;
     
-    public Peliculas(String titulo, int audiencia, String empresa, String valoracion, String plataforma, Patrocinador patrocinador, double duracion, String categorias, String sinopsis, String ubicacion){
-        super();
+    public Peliculas(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis, String ubicacion){
+        super(titulo, audiencia, empresa, duracion, plataforma);
         this.duracion=duracion;
         this.categorias=categorias;
         this.sinopsis=sinopsis;
@@ -43,9 +44,14 @@ public class Peliculas extends Entretenimiento{
         return ubicacion;
     }
     
+    /**
+     *
+     * @return
+     */
+    @Override
     public String toString(){
-                return "Nombre: " + this.titulo + "\nAudiencia: " + this.audiencia + "\nDueños: " + this.empresa + "\nValoracion: " + this.valoracion + 
-                "\nPlataforma: " + this.plataforma + "\nPatrocinadores: " + this.patrocinador + "\nActores: " + this.actores + "\nDuracion: " + this.duracion + 
+                return "Nombre: " + this.getTitulo() + "\nAudiencia: " + this.getAudiencia() + "\nDueños: " + this.getEmpresa() + "\nValoracion: " + this.getCritica() + 
+                "\nPlataforma: " + this.getPlataforma() + "\nPatrocinadores: " + this.getPatrocinador() + "\nActores: " + Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
                 "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis + "\nUbicacion: " + this.sinopsis;
     }
     

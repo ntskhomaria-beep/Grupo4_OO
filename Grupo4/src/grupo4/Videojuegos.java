@@ -4,6 +4,8 @@
  */
 package grupo4;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Random;
 /**
  *
  * @author E.BEDOYA
@@ -21,11 +23,11 @@ public class Videojuegos extends Entretenimiento{
     private int DuracionAprox;
     private boolean microtransacciones;
     
-    public Videojuegos(String titulo, int audiencia, String empresa, String valoracion, String plataforma, Patrocinador patrocinador, String franquicia, 
+    public Videojuegos(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinadores, String franquicia, 
             String categoria, boolean online, boolean competitivo, String advertencia, String ClasifiEdad, double costo, boolean subscripcion, LocalDate UltimaAct,
             int DuracionAprox, boolean microtransacciones){
         
-        super();
+        super(titulo, audiencia, empresa, costo, plataforma);
         this.franquicia=franquicia;
         this.categoria=categoria;
         this.online=online;
@@ -43,7 +45,9 @@ public class Videojuegos extends Entretenimiento{
         return categoria;
     }
     public boolean mostrarDisponibilidad(){
-        if () {
+        Random ale = new Random();
+        int num = ale.nextInt(1,11);
+        if (num <=5) {
             return true;
         } else {
             return false;
