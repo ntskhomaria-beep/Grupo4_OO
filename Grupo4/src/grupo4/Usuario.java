@@ -23,15 +23,15 @@ public class Usuario {
         this.historialVisualizacion = historialVisualizacion;
     }
     
-    public ArrayList<String> getId(){
-        id.add("User12");
-        return id;
-    }
-    public ArrayList<String> getContrasenia(){
-        contrasenia.add("24214");
-        return contrasenia;
-    }
-    
+//    public ArrayList<String> getId(){
+//        id.add("User12");
+//        return id;
+//    }
+//    public ArrayList<String> getContrasenia(){
+//        contrasenia.add("24214");
+//        return contrasenia;
+//    }
+//    
     
     public String getNombre(){
         return nombre;
@@ -49,38 +49,35 @@ public class Usuario {
         this.gmail=gmail;
     }
     
-//    
-//    public boolean iniciarSesion(String id, String contraseniaa) {
-//    ArrayList<String> id;
-//    ArrayList<String> contrasenia;
-//    if (id.equals(id) && contrasenia.equals(contrasenia)) {
-//        return true;
-//    } else {
-//        System.out.println("Usuario o contraseña incorrecta. Vuelva a intentarlo");
-//        return false;
-//    }
-//}
-//    
+    // Falta pulirlo
+    public boolean iniciarSesion(String id, ArrayList<String> contraseniaa) {
+    String nombre;
+    ArrayList<String> contrasenia;
+    if (nombre.equals(nombre) && contrasenia.equals(contrasenia)) {
+        return true;
+    } else {
+        System.out.println("Usuario o contraseña incorrecta. Vuelva a intentarlo");
+        return false;
+    }
+}
+    
     public void cerrarSesion(){
         System.out.println("Sesion cerrada.");
     }
     
-//  public void verContenido extends Entretenimiento(){
-//        
-//  }
-//   
-//    
+    public void verContenido extends Entretenimiento () {
+        System.out.println("Has valorado " +  mostrarInformacion.getTitulo());
+    }
+    
 //  ValorarContenido y verContenido --> Extends Entretenimineto
-//  public void valorarContenido extends Entretenimiento (int puntuacion) {
-//    mostrarInformacion.setPuntuacion(puntuacion);
-//    System.out.println("Has valorado " +  mostrarInformacion.getTitulo() + " con " + puntuacion + " estrellas.");
-//  }
-//
-//  public void restablecerContraseña(String nuevaContraseña) {
-//    this.contrasenia = nuevaContraseña;
-//    System.out.println("Contraseña actualizada correctamente.");
-//  }
-    
-    
+  public void valorarContenido extends Entretenimiento (double critica) {
+    mostrarInformacion.setPuntuacion(critica);
+    System.out.println("Has valorado " +  mostrarInformacion.getTitulo() + " con " + critica + " estrellas.");
+  }
+
+  public void restablecerContraseña(ArrayList<String> nuevaContraseña) {
+    this.contrasenia = nuevaContraseña;
+    System.out.println("Contraseña actualizada correctamente.");
+  }
     
 }
