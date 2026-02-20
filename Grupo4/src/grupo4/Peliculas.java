@@ -4,7 +4,7 @@
 
 package grupo4;
 
-import grupo4.Actores;
+import grupo4.Actor;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
@@ -21,7 +21,7 @@ public class Peliculas extends Entretenimiento{
     private String categorias;
     private String sinopsis;
     private String ubicacion;
-    private Actores[] actor;
+    private Actor[] actor;
     int n = 0;
     
     public Peliculas(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis, String ubicacion){
@@ -31,7 +31,7 @@ public class Peliculas extends Entretenimiento{
         this.sinopsis=sinopsis;
         this.ubicacion=ubicacion;
         
-        ArrayList<Actores> actor = new ArrayList<Actores>();
+        ArrayList<Actor> actores = new ArrayList<Actor>();
     }
     
     public String mostrarCategorias(){
@@ -50,9 +50,10 @@ public class Peliculas extends Entretenimiento{
      */
     @Override
     public String toString(){
-                return "Nombre: " + this.getTitulo() + "\nAudiencia: " + this.getAudiencia() + "\nDueños: " + this.getEmpresa() + "\nValoracion: " + this.getCritica() + 
-                "\nPlataforma: " + this.getPlataforma() + "\nPatrocinadores: " + this.getPatrocinador() + "\nActores: " + Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
-                "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis + "\nUbicacion: " + this.sinopsis;
+        this.mostrarInformacion();
+        
+        return Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
+               "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis + "\nUbicacion: " + this.sinopsis;
     }
     
     
