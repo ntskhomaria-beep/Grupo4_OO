@@ -65,7 +65,18 @@ public class Videojuegos extends Entretenimiento{
     public boolean mostrarCompetitivo(){
         return competitivo;
     }
-    
+    public String mostrarEdad(){
+        return ClasifiEdad;
+    }
+    public boolean mostrarSubscrip(){
+        return subscripcion;
+    }
+    public int mostrarDuracion(){
+        return DuracionAprox;
+    }
+    public boolean MostrarMicro(){
+        return microtransacciones;
+    }
     
     @Override
     public String toString(){
