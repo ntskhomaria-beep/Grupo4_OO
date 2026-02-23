@@ -27,4 +27,59 @@ public class Series {
           this.clasificacionEdad=clasificacionEdad; 
           this.adaptacion=adaptacion; 
       }
+      
+      //GETTERS 
+      public int getCapitulos(){
+          return capitulos; 
+      }
+      
+      public String getGenero(){
+          return genero;     
+      }
+      
+      public String getClasificacionEdad(){
+          return clasificacionEdad; 
+      }
+      
+      public String getAdaptacion(){
+          return adaptacion;
+      }
+      
+      //SETTERS 
+      public void setTemporadas(int temporadas){
+          this.temporadas=temporadas; 
+      }
+      
+      public void setCapitulos(int capitulos){
+          this.capitulos=capitulos;
+      }
+      
+      public void setGenero(String genero){
+          this.genero=genero; 
+      }
+      
+      public void setClasificacionEdad(String clasificacionEdad){
+          this.clasificacionEdad=clasificacionEdad; 
+      }
+      
+      public void setAdaptacion(String adaptacion){
+          this.adaptacion=adaptacion; 
+      }
+      
+     
+      
+      public void mostrarTemporadas(){
+          System.out.println("Número de temporadas: " + temporadas);
+      }
+      
+      public void mostrarActores(){
+         System.out.println("Actores que aparecen en esta serie:");
+      System.out.println();
+      System.out.println("-------------------------------------------------------------------------");
+      for (int i = 0; i < actores.size(); i++) {
+      System.out.println("Posición " + i + " ? " + actores.get(i));
+      }
+      }
+      
+      
 }
