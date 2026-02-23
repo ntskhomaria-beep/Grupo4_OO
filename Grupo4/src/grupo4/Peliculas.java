@@ -36,14 +36,16 @@ public class Peliculas extends Entretenimiento{
     public String mostrarCategorias(){
         return categorias;
     }
-    public String mostrarSinopsis(){
-        return sinopsis;
-    }
     public String mostrarUbicacion(){
         return ubicacion;
     }
     public String verSinopsis(){
         return sinopsis;
+    }
+    public void mostrarActores(){
+        for (int i = 0; i < actor.length; i++) {
+            System.out.print(actor[i] + ", ");
+        }
     }
     
     /**
