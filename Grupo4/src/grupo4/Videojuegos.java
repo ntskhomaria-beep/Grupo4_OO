@@ -22,6 +22,8 @@ public class Videojuegos extends Entretenimiento{
     private LocalDate ultimaAct;
     private int DuracionAprox;
     private boolean microtransacciones;
+    Random ale = new Random();
+    int num = ale.nextInt(1,11);
     
     public Videojuegos(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinadores, String franquicia, 
             String categoria, boolean online, boolean competitivo, String advertencia, String ClasifiEdad, double costo, boolean subscripcion, LocalDate UltimaAct,
@@ -45,9 +47,7 @@ public class Videojuegos extends Entretenimiento{
         return categoria;
     }
     public boolean mostrarDisponibilidad(){
-        Random ale = new Random();
-        int num = ale.nextInt(1,11);
-        if (num <=5) {
+        if (num <5) {
             return true;
         } else {
             return false;
@@ -55,5 +55,22 @@ public class Videojuegos extends Entretenimiento{
     }
     public double mostrarPrecio(){
         return costo;
+    }
+    public LocalDate mostrarAct(){
+        return ultimaAct;
+    }
+    public boolean mostrarOnline(){
+        return online;
+    }
+    public boolean mostrarCompetitivo(){
+        return competitivo;
+    }
+    
+    
+    @Override
+    public String toString(){
+        return "Franquincia: " + franquicia + "\nCategoria: " + categoria + "\nOnline: " + online + "\nComptetitivo: " + competitivo 
+                + "\nAdvertencia: " + advertencia + "\nClasificacion de edad: " + ClasifiEdad + "\nPrecio: " + costo + "\nSubscripcion: " 
+                + subscripcion + "\nUltima actualizacion: " + ultimaAct + "\nDuracion edtimada: " + DuracionAprox + "\nMicrotrasacciones: " + microtransacciones;
     }
 }
