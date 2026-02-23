@@ -22,7 +22,6 @@ public class Peliculas extends Entretenimiento{
     private String sinopsis;
     private String ubicacion;
     private Actor[] actor;
-    int n = 0;
     
     public Peliculas(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis, String ubicacion){
         super(titulo, audiencia, empresa, duracion, plataforma);
@@ -42,6 +41,9 @@ public class Peliculas extends Entretenimiento{
     }
     public String mostrarUbicacion(){
         return ubicacion;
+    }
+    public String verSinopsis(){
+        return sinopsis;
     }
     
     /**
