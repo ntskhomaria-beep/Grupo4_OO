@@ -29,7 +29,7 @@ public class Videojuegos extends Entretenimiento{
             String categoria, boolean online, boolean competitivo, String advertencia, String ClasifiEdad, double costo, boolean subscripcion, LocalDate UltimaAct,
             int DuracionAprox, boolean microtransacciones){
         
-        super(titulo, audiencia, empresa, costo, plataforma);
+        super(titulo, audiencia, empresa, costo, plataforma, patrocinadores);
         this.franquicia=franquicia;
         this.categoria=categoria;
         this.online=online;
