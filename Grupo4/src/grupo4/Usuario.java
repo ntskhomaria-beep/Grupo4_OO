@@ -3,7 +3,7 @@ package grupo4;
 import java.util.ArrayList;
 
 
-public class Usuario {
+public class Usuario{
     ArrayList<String> id;
     ArrayList<String> contrasenia;
     //private String id;
@@ -51,9 +51,9 @@ public class Usuario {
     
     // Falta pulirlo
     public boolean iniciarSesion(String id, ArrayList<String> contraseniaa) {
-    String nombre;
+    String nombre = id;
     ArrayList<String> contrasenia;
-    if (nombre.equals(nombre) && contrasenia.equals(contrasenia)) {
+    if (nombre.equals(this.nombre) && contrasenia.equals(this.contrasenia)) {
         return true;
     } else {
         System.out.println("Usuario o contraseña incorrecta. Vuelva a intentarlo");
@@ -65,14 +65,15 @@ public class Usuario {
         System.out.println("Sesion cerrada.");
     }
     
-    public void verContenido extends Entretenimiento () {
-        System.out.println("Has valorado " +  mostrarInformacion.getTitulo());
+    public void verContenido(Entretenimiento entretenimiento) {
+        entretenimiento.mostrarInformacion();
     }
     
 //  ValorarContenido y verContenido --> Extends Entretenimineto
-  public void valorarContenido extends Entretenimiento (double critica) {
-    mostrarInformacion.setPuntuacion(critica);
-    System.out.println("Has valorado " +  mostrarInformacion.getTitulo() + " con " + critica + " estrellas.");
+  public void valorarContenido (Entretenimiento entretenimiento, double critica) {
+    System.out.print("Has valorado " );
+    entretenimiento.mostrarInformacion();
+    System.out.print(" con " + critica + " estrellas.");
   }
 
   public void restablecerContraseña(ArrayList<String> nuevaContraseña) {
