@@ -31,7 +31,7 @@ public class Entretenimiento {
   }
   
   public void mostrarInformacion(){
-      System.out.println("Titulo: " + titulo + ",Audiencia: " + audiencia + ",Empresa: " + empresa + ",Crítica: " + critica + ",Plataforma: "+plataforma + ",Patrocinadores: "+patrocinador);
+      System.out.println("Titulo: " + titulo + ", Audiencia: " + audiencia + ", Empresa: " + empresa + ", Crítica: " + critica + ", Plataforma: "+plataforma + ", Patrocinadores: "+patrocinador);
   }
   
   public double mostrarCritica(){
