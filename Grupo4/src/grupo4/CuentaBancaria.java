@@ -50,7 +50,8 @@ public class CuentaBancaria {
     }
     
     public void mostrarInformacion(){
-        
+        System.out.print("La tarjeta de " + entidadBancaria + " esta al nombre del titular " + titular +
+                " y su tipo de cuenta es " + tipoCuenta); 
     }
     
     public void depositar (){
