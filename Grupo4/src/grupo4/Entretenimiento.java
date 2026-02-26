@@ -21,7 +21,7 @@ public class Entretenimiento {
   
   public Scanner scanner; 
   
-  public Entretenimiento(String titulo, int audiencia, String empresa, double critica, String plataforma){
+  public Entretenimiento(String titulo, int audiencia, String empresa, double critica, String plataforma, ArrayList<String>patrocinadores){
       this.titulo=titulo; 
       this.audiencia=audiencia; 
       this.empresa=empresa;

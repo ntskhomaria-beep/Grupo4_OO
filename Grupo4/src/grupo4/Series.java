@@ -10,25 +10,32 @@ import java.util.ArrayList;
  *
  * @author n.tskhomaria
  */
-public class Series {
+public class Series extends Entretenimiento {
+
     private int temporadas; 
     private int capitulos; 
     private String genero;
     private ArrayList<String> actores;
     private String clasificacionEdad; 
     private String adaptacion; 
-    
-    
-      public Series(int temporadas, int capitulos,String genero, String clasificacionEdad, String adaptacion){
-          this.temporadas=temporadas;
-          this.capitulos=capitulos; 
-          this.genero=genero; 
-          this.actores= new ArrayList<>(); 
-          this.clasificacionEdad=clasificacionEdad; 
-          this.adaptacion=adaptacion; 
-      }
+
+    public Series(String titulo, int audiencia, String empresa, double critica,
+                  String plataforma, ArrayList<String> patrocinadores,
+                  int temporadas, int capitulos, String genero,
+                  ArrayList<String> actores, String clasificacionEdad,
+                  String adaptacion) {
+
+        super(titulo, audiencia, empresa, critica, plataforma, patrocinadores);
+
+        this.temporadas = temporadas;
+        this.capitulos = capitulos;
+        this.genero = genero;
+        this.actores = actores;
+        this.clasificacionEdad = clasificacionEdad;
+        this.adaptacion = adaptacion;
+    }
+            
       
-      //GETTERS 
       public int getCapitulos(){
           return capitulos; 
       }
