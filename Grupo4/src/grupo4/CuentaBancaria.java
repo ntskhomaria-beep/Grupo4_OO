@@ -10,11 +10,11 @@ public class CuentaBancaria {
     
     public CuentaBancaria (String numeroCuenta, String titular, double saldo,
             String tipoCuenta, String entidadBancaria){
-        this.numeroCuenta=numeroCuenta;
-        this.titular=titular;
-        this.saldo=saldo;
-        this.tipoCuenta=tipoCuenta;
-        this.entidadBancaria=entidadBancaria;
+            this.numeroCuenta=numeroCuenta;
+            this.titular=titular;
+            this.saldo=saldo;
+            this.tipoCuenta=tipoCuenta;
+            this.entidadBancaria=entidadBancaria;
     }
 
     public String getNumeroCuenta(){
@@ -70,9 +70,3 @@ public class CuentaBancaria {
 //    }
     
 }
-
-
-//mostrarInformacion() : void
-//depositar(monto : double) : void
-//retirar(monto : double) : boolean
-//verSaldo() : double
