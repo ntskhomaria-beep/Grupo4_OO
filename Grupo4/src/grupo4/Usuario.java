@@ -50,10 +50,9 @@ public class Usuario{
     }
     
     // Falta pulirlo
-    public boolean iniciarSesion(String id, ArrayList<String> contraseniaa) {
-    String nombre = id;
-    ArrayList<String> contrasenia;
-    if (nombre.equals(this.nombre) && contrasenia.equals(this.contrasenia)) {
+    public boolean iniciarSesion(String id, String contraseniaa) {
+    if (id.equals(this.id) && contraseniaa.equals(this.contrasenia)) {
+        System.out.println("Usuario correcto.");
         return true;
     } else {
         System.out.println("Usuario o contraseña incorrecta. Vuelva a intentarlo");
