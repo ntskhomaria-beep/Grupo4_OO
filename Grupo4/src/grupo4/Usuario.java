@@ -51,7 +51,7 @@ public class Usuario{
     
     // Falta pulirlo
     public boolean iniciarSesion(String id, String contraseniaa) {
-    if (id.equals(this.id) && contraseniaa.equals(this.contrasenia)) {
+    if (id.equals(this.nombre) && contraseniaa.equals(this.contrasenia)) {
         System.out.println("Usuario correcto.");
         return true;
     } else {
