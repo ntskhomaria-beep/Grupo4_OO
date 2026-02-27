@@ -23,16 +23,6 @@ public class Usuario{
         this.historialVisualizacion = historialVisualizacion;
     }
     
-//    public ArrayList<String> getId(){
-//        id.add("User12");
-//        return id;
-//    }
-//    public ArrayList<String> getContrasenia(){
-//        contrasenia.add("24214");
-//        return contrasenia;
-//    }
-//    
-    
     public String getNombre(){
         return nombre;
     }
