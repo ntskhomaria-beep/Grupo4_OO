@@ -17,18 +17,21 @@ public class Entretenimiento {
   private String empresa; 
   private double critica; 
   private String plataforma; 
-  private ArrayList<String>patrocinador;
+  ArrayList<String>patrocinador;
   
   public Scanner scanner; 
   
-  public Entretenimiento(String titulo, int audiencia, String empresa, double critica, String plataforma, ArrayList<String>patrocinadores){
-      this.titulo=titulo; 
-      this.audiencia=audiencia; 
-      this.empresa=empresa;
-      this.critica=critica; 
-      this.plataforma=plataforma; 
-      this.patrocinador=new ArrayList<>(); 
-  }
+    public Entretenimiento(String titulo, int audiencia, String empresa,
+            double critica, String plataforma,
+            ArrayList<String> patrocinadores) {
+
+        this.titulo = titulo;
+        this.audiencia = audiencia;
+        this.empresa = empresa;
+        this.critica = critica;
+        this.plataforma = plataforma;
+        this.patrocinador = patrocinadores; 
+    }
   
   public void mostrarInformacion(){
       System.out.println("Titulo: " + titulo + ", Audiencia: " + audiencia + ", Empresa: " + empresa + ", Crítica: " + critica + ", Plataforma: "+plataforma + ", Patrocinadores: "+patrocinador);
@@ -72,6 +75,15 @@ System.out.println("Posición " + i + " ? " + patrocinador.get(i));
         }
         
   }
+    @Override
+    public String toString() {
+        return "Título: " + titulo
+                + "\nAudiencia: " + audiencia
+                + "\nEmpresa: " + empresa
+                + "\nCrítica: " + critica
+                + "\nPlataforma: " + plataforma
+                + "\nPatrocinadores: " + patrocinador;
+    }
 }
   
 

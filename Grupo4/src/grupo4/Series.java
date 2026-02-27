@@ -87,6 +87,17 @@ public class Series extends Entretenimiento {
       System.out.println("Posición " + i + " ? " + actores.get(i));
       }
       }
+      @Override
+      public String toString(){
+          return super.toString()+
+                  "\nTemporadas: " + temporadas
+                  + "\nCapítulos: " + capitulos
+                  + "\nGénero: " + genero
+                  + "\nActores: " + actores
+                  + "\nClasificación de edad: " + clasificacionEdad
+                  + "\nAdaptación: " + adaptacion;
+      
+      }
       
       
 }
