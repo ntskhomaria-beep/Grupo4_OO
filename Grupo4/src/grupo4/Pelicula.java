@@ -51,7 +51,7 @@ public class Pelicula extends Entretenimiento{
         this.mostrarInformacion();
         
         return Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
-               "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis + "\nUbicacion: " + this.sinopsis;
+               "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis;
     }
     
     
