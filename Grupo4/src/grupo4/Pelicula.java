@@ -48,7 +48,8 @@ public class Pelicula extends Entretenimiento{
      */
     @Override
     public String toString(){
-        return Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
+        return super.toString() +
+        Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
                "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis;
     }
     
