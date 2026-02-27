@@ -47,6 +47,16 @@ public class Entretenimiento {
       
   }
   
+  public String mostrarInformacion(){
+        return "Título: " + titulo
+                + "\nAudiencia: " + audiencia
+                + "\nEmpresa: " + empresa
+                + "\nCrítica: " + critica
+                + "\nPlataforma: " + plataforma
+                + "\nPatrocinadores: " + patrocinador;
+    
+  }
+  
   public void mostrarPatrocinadores(){
       System.out.println("Patrocinadores:");
       System.out.println();
