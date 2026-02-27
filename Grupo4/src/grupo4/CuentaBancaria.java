@@ -54,20 +54,22 @@ public class CuentaBancaria {
                 " y su tipo de cuenta es " + tipoCuenta); 
     }
     
-    public void depositar (){
-        
+    public void depositar(double monto) {
+        if (monto > 0) {
+            saldo += monto;
+            System.out.println("Depósito exitoso. Nuevo saldo: " + saldo);
+        } else {
+            System.out.println("El monto debe ser mayor que 0.");
+        }
     }
-    
-//    public boolean retirar(double saldo){
-//        double saldo;
-//        if (
-//        return true;
-//        
-//        return false;
-//    }
-//    
-//    public double verSaldo(){
-//        
-//    }
-    
+
+    public void retirar(double monto) {
+        if (monto > 0 && monto <= saldo) {
+            saldo -= monto;
+            System.out.println("Retiro exitoso. Nuevo saldo: " + saldo);
+        } else {
+            System.out.println("Fondos insuficientes o monto inválido.");
+        }
+    }
+
 }
