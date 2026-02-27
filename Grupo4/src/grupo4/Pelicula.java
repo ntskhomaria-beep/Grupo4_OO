@@ -3,30 +3,23 @@
  */
 
 package grupo4;
-
-import grupo4.Actor;
-import java.time.LocalDate;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 
-/**
- *
- * @author e.bedoya
- */
+
 public class Pelicula extends Entretenimiento{
     private double duracion;
     private String categorias;
     private String sinopsis;
-    private Actor[] actor;
+    private String clasifiEdad; 
+    ArrayList<String>actores;
     
-    public Pelicula(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis){
+    public Pelicula(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis, ArrayList<String>actor){
         super(titulo, audiencia, empresa, duracion, plataforma, patrocinador);
         this.duracion=duracion;
         this.categorias=categorias;
         this.sinopsis=sinopsis;
+        this.actores=actor; 
         
-        ArrayList<Actor> actores = new ArrayList<Actor>();
     }
     
     public String mostrarCategorias(){
@@ -36,10 +29,12 @@ public class Pelicula extends Entretenimiento{
     public String verSinopsis(){
         return sinopsis;
     }
-    public void mostrarActores(){
-        for (int i = 0; i < actor.length; i++) {
-            System.out.print(actor[i] + ", ");
+    public void mostrarActores() {
+        System.out.println("Actores:");
+        for (String a : actores) { //AQUI se recorre el array mucho mas facil.
+            System.out.print(a + ", ");
         }
+        System.out.println();
     }
     
     /**
@@ -47,13 +42,12 @@ public class Pelicula extends Entretenimiento{
      * @return
      */
     @Override
-    public String toString(){
-        return super.toString() +
-        Arrays.toString(this.actor) + "\nDuracion: " + this.duracion + 
-               "\nCategoria: " + this.categorias + "\nSinopsis: " + this.sinopsis;
+    public String toString() {
+        // Incluye toda la info de Entretenimiento + datos específicos de Peliculas
+        return super.toString()
+                + "\nDuración: " + duracion
+                + "\nCategoría: " + categorias
+                + "\nClasificación de edad: " + clasifiEdad
+                + "\nDuración (minutos): " + duracion;
     }
-    
-    
-    
-    
 }

@@ -33,9 +33,7 @@ public class Entretenimiento {
         this.patrocinador = patrocinadores; 
     }
   
-  public void mostrarInformacion(){
-      System.out.println("Titulo: " + titulo + ", Audiencia: " + audiencia + ", Empresa: " + empresa + ", Crítica: " + critica + ", Plataforma: "+plataforma + ", Patrocinadores: "+patrocinador);
-  }
+
   
   public double mostrarCritica(){
       return critica;
