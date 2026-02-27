@@ -75,12 +75,12 @@ public class Usuario{
   
   public class gestionId {
     // 2. Declarar el ArrayList (dentro de la clase)
-    private ArrayList<String> listaId;
+    ArrayList<String> listaId;
   
     // Constructor
     public gestionId() {
         // 3. Inicializar el ArrayList
-        listaId = new ArrayList<>();
+        listaId = id;
     }
 
     // Método para añadir id
@@ -95,10 +95,10 @@ public class Usuario{
 }
   
   public class gestionContrasenia {
-    private ArrayList<String> listaContrasenia;
+    ArrayList<String> listaContrasenia;
   
     public gestionContrasenia() {
-        listaContrasenia = new ArrayList<>();
+        listaContrasenia = contrasenia;
     }
 
     public void agregarContrasenia(String contrasenia) {
