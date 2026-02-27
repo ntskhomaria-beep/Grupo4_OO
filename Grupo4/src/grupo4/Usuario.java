@@ -23,16 +23,6 @@ public class Usuario{
         this.historialVisualizacion = historialVisualizacion;
     }
     
-//    public ArrayList<String> getId(){
-//        id.add("User12");
-//        return id;
-//    }
-//    public ArrayList<String> getContrasenia(){
-//        contrasenia.add("24214");
-//        return contrasenia;
-//    }
-//    
-    
     public String getNombre(){
         return nombre;
     }
@@ -85,12 +75,12 @@ public class Usuario{
   
   public class gestionId {
     // 2. Declarar el ArrayList (dentro de la clase)
-    private ArrayList<String> listaId;
+    ArrayList<String> listaId;
   
     // Constructor
     public gestionId() {
         // 3. Inicializar el ArrayList
-        listaId = new ArrayList<>();
+        listaId = id;
     }
 
     // Método para añadir id
@@ -101,6 +91,22 @@ public class Usuario{
     // Método para mostrar id
     public void mostrarId() {
         System.out.println("ID: " + listaId);
+    }
+}
+  
+  public class gestionContrasenia {
+    ArrayList<String> listaContrasenia;
+  
+    public gestionContrasenia() {
+        listaContrasenia = contrasenia;
+    }
+
+    public void agregarContrasenia(String contrasenia) {
+        listaContrasenia.add(contrasenia); // Usar .add()
+    }
+
+    public void mostrarId() {
+        System.out.println("Contrasenia: " + listaContrasenia);
     }
 }
 }
