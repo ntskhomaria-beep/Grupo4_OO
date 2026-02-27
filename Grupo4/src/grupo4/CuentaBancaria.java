@@ -57,18 +57,18 @@ public class CuentaBancaria {
     public void depositar(double dinero) {
         if (dinero > 0) {
             saldo += dinero;
-            System.out.println("Depósito exitoso. Nuevo saldo: " + saldo);
+            System.out.println("Saldo añadido: " + saldo);
         } else {
-            System.out.println("El monto debe ser mayor que 0.");
+            System.out.println("No puedes depositar menos de 0");
         }
     }
 
     public void retirar(double dinero) {
         if (dinero > 0 && dinero <= saldo) {
             saldo -= dinero;
-            System.out.println("Retiro exitoso. Nuevo saldo: " + saldo);
+            System.out.println("Has retirado " + saldo + " euros/dolares");
         } else {
-            System.out.println("Fondos insuficientes o monto inválido.");
+            System.out.println("No puedes retirar nada, tienes guardado 0.");
         }
     }
 
