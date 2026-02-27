@@ -103,4 +103,20 @@ public class Usuario{
         System.out.println("ID: " + listaId);
     }
 }
+  
+  public class gestionContrasenia {
+    private ArrayList<String> listaContrasenia;
+  
+    public gestionContrasenia() {
+        listaContrasenia = new ArrayList<>();
+    }
+
+    public void agregarContrasenia(String contrasenia) {
+        listaContrasenia.add(contrasenia); // Usar .add()
+    }
+
+    public void mostrarId() {
+        System.out.println("Contrasenia: " + listaContrasenia);
+    }
+}
 }
