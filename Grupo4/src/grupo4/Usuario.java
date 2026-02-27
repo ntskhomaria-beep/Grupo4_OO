@@ -80,4 +80,27 @@ public class Usuario{
     System.out.println("Contraseña actualizada correctamente.");
   }
     
+  
+  
+  
+  public class gestionId {
+    // 2. Declarar el ArrayList (dentro de la clase)
+    private ArrayList<String> listaId;
+  
+    // Constructor
+    public gestionId() {
+        // 3. Inicializar el ArrayList
+        listaId = new ArrayList<>();
+    }
+
+    // Método para añadir id
+    public void agregarId(String id) {
+        listaId.add(id); // Usar .add()
+    }
+
+    // Método para mostrar id
+    public void mostrarId() {
+        System.out.println("ID: " + listaId);
+    }
+}
 }
