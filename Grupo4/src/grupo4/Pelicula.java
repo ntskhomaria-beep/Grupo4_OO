@@ -18,15 +18,13 @@ public class Pelicula extends Entretenimiento{
     private double duracion;
     private String categorias;
     private String sinopsis;
-    private String ubicacion;
     private Actor[] actor;
     
-    public Pelicula(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis, String ubicacion){
+    public Pelicula(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis){
         super(titulo, audiencia, empresa, duracion, plataforma, patrocinador);
         this.duracion=duracion;
         this.categorias=categorias;
         this.sinopsis=sinopsis;
-        this.ubicacion=ubicacion;
         
         ArrayList<Actor> actores = new ArrayList<Actor>();
     }
@@ -34,9 +32,7 @@ public class Pelicula extends Entretenimiento{
     public String mostrarCategorias(){
         return categorias;
     }
-    public String mostrarUbicacion(){
-        return ubicacion;
-    }
+    
     public String verSinopsis(){
         return sinopsis;
     }
