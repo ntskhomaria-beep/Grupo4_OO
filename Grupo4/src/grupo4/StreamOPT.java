@@ -12,6 +12,10 @@ import java.util.Scanner;
  */
 public class StreamOPT {
     public static void main(String[] args) {
+        Usuario usuario1 = new Usuario("Xx_motherTrucker_xX", "Michael Martinez", "mtieart@gmail.com", "DoomGuyIscOOL12", "Estandar", "vacio");
+        Usuario usuario2 = new Usuario("PussyLord69", "Jhon Perez", "lolahoras@gmail.es", "maressopa6969", "VIP", "Doom(Classic), CounterStrike, Roblox, Ultrakill...");
+        Usuario usuario3 = new Usuario("JustKnifethistime","Petter Griffin", "peterfamilyguy@gmail.com", "peter123456", "Estandar", "Call of duty, halo, final fantasy 7, WoW...");
+        
         System.out.println("Bienvenido! Aqui podras ver varias peliculas, series y estreams de tus personas y "
                 + "actores favorito.");
         System.out.println();
@@ -27,8 +31,9 @@ public class StreamOPT {
                 case "Iniciar sesion":
                 case "IniciarSesion":{
                     System.out.println();
+               
                 }
-            
+                
             case "2":
                 case "peliculas":
                 case "Peliculas":{
