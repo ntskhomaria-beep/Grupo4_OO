@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 
 public class Usuario{
-    ArrayList<String> id;
-    ArrayList<String> contrasenia;
+    private String id;
+    private String contrasenia;
     //private String id;
     private String nombre;
     private String gmail;
@@ -13,12 +13,12 @@ public class Usuario{
     private String tipoSuscripcion; // Por ahora lo dejamos como String
     private String historialVisualizacion; // Por ahora lo dejamos como String
     
-    public Usuario(ArrayList<String> id, String nombre, String gmail, ArrayList<String> contrasenia, String tipoSuscripcion,
+    public Usuario(String id, String nombre, String gmail, String contrasenia, String tipoSuscripcion,
             String historialVisualizacion){
-        this.id = new ArrayList<String>();
+        this.id = id;
         this.nombre = nombre;
         this.gmail = gmail;
-        this.contrasenia = new ArrayList<String>();
+        this.contrasenia = contrasenia;
         this.tipoSuscripcion = tipoSuscripcion;
         this.historialVisualizacion = historialVisualizacion;
     }
@@ -65,7 +65,7 @@ public class Usuario{
     System.out.print(" con " + critica + " estrellas.");
   }
 
-  public void restablecerContraseña(ArrayList<String> nuevaContraseña) {
+  public void restablecerContraseña(String nuevaContraseña) {
     this.contrasenia = nuevaContraseña;
     System.out.println("Contraseña actualizada correctamente.");
   }
@@ -78,35 +78,35 @@ public class Usuario{
     ArrayList<String> listaId;
   
     // Constructor
-    public gestionId() {
-        // 3. Inicializar el ArrayList
-        listaId = id;
-    }
-
-    // Método para añadir id
-    public void agregarId(String id) {
-        listaId.add(id); // Usar .add()
-    }
-
-    // Método para mostrar id
-    public void mostrarId() {
-        System.out.println("ID: " + listaId);
-    }
-}
-  
-  public class gestionContrasenia {
-    ArrayList<String> listaContrasenia;
-  
-    public gestionContrasenia() {
-        listaContrasenia = contrasenia;
-    }
-
-    public void agregarContrasenia(String contrasenia) {
-        listaContrasenia.add(contrasenia); // Usar .add()
-    }
-
-    public void mostrarId() {
-        System.out.println("Contrasenia: " + listaContrasenia);
-    }
+//    public gestionId() {
+//        // 3. Inicializar el ArrayList
+//        listaId = id;
+//    }
+//
+//    // Método para añadir id
+//    public void agregarId(String id) {
+//        listaId.add(id); // Usar .add()
+//    }
+//
+//    // Método para mostrar id
+//    public void mostrarId() {
+//        System.out.println("ID: " + listaId);
+//    }
+//}
+//  
+//  public class gestionContrasenia {
+//    ArrayList<String> listaContrasenia;
+//  
+//    public gestionContrasenia() {
+//        listaContrasenia = contrasenia;
+//    }
+//
+//    public void agregarContrasenia(String contrasenia) {
+//        listaContrasenia.add(contrasenia); // Usar .add()
+//    }
+//
+//    public void mostrarId() {
+//        System.out.println("Contrasenia: " + listaContrasenia);
+//    }
 }
 }
