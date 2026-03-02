@@ -3,25 +3,28 @@ package grupo4;
 import java.util.ArrayList;
 
 
-public class Usuario{
+public class Usuario {
+
     private String id;
     private String contrasenia;
-    //private String id;
     private String nombre;
     private String gmail;
-    //private String contrasenia;
-    private String tipoSuscripcion; // Por ahora lo dejamos como String
-    private String historialVisualizacion; // Por ahora lo dejamos como String
-    
-    public Usuario(String id, String nombre, String gmail, String contrasenia, String tipoSuscripcion,
-            String historialVisualizacion){
-        this.id = id;
-        this.nombre = nombre;
-        this.gmail = gmail;
-        this.contrasenia = contrasenia;
-        this.tipoSuscripcion = tipoSuscripcion;
-        this.historialVisualizacion = historialVisualizacion;
+
+    public Usuario(String id, String contrasenia, String nombre, String gmail) {
+        this.id=id;
+        this.contrasenia=contrasenia;
+        this.nombre=nombre;
+        this.gmail=gmail; 
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
+
     
     public String getNombre(){
         return nombre;
@@ -69,44 +72,5 @@ public class Usuario{
     this.contrasenia = nuevaContraseña;
     System.out.println("Contraseña actualizada correctamente.");
   }
-    
-  
-  
-  
-  public class gestionId {
-    // 2. Declarar el ArrayList (dentro de la clase)
-    ArrayList<String> listaId;
-  
-    // Constructor
-//    public gestionId() {
-//        // 3. Inicializar el ArrayList
-//        listaId = id;
-//    }
-//
-//    // Método para añadir id
-//    public void agregarId(String id) {
-//        listaId.add(id); // Usar .add()
-//    }
-//
-//    // Método para mostrar id
-//    public void mostrarId() {
-//        System.out.println("ID: " + listaId);
-//    }
-//}
-//  
-//  public class gestionContrasenia {
-//    ArrayList<String> listaContrasenia;
-//  
-//    public gestionContrasenia() {
-//        listaContrasenia = contrasenia;
-//    }
-//
-//    public void agregarContrasenia(String contrasenia) {
-//        listaContrasenia.add(contrasenia); // Usar .add()
-//    }
-//
-//    public void mostrarId() {
-//        System.out.println("Contrasenia: " + listaContrasenia);
-//    }
 }
-}
+
