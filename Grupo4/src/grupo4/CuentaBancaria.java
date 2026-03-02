@@ -33,10 +33,6 @@ public class CuentaBancaria {
         return saldo;
     }
     
-    public void setSaldo(double saldo){
-        this.saldo=saldo;
-    }
-    
     public String getTipoCuenta(){
         return tipoCuenta;
     }
@@ -66,9 +62,10 @@ public class CuentaBancaria {
     public void retirar(double dinero) {
         if (dinero > 0 && dinero <= saldo) {
             saldo -= dinero;
-            System.out.println("Has retirado " + saldo + " euros/dolares");
+            System.out.println("Has retirado " + dinero + " euros/dolares");
+            System.out.println("Saldo actual: " + saldo + ".");
         } else {
-            System.out.println("No puedes retirar nada, tienes guardado 0.");
+            System.out.println("Fondos insuficientes.");
         }
     }
 
