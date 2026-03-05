@@ -40,7 +40,9 @@ public class Suscripcion {
         return limiteStreamsDia;
     }
    
-    public boolean isCalidad4K() {
+
+    
+    public boolean getCalidad4K() {
         return calidad4K;
     }
 
@@ -52,7 +54,8 @@ public class Suscripcion {
         System.out.println("Comentarios: " + (permiteComentarios ? "Permitidos" : "No permitidos"));
         System.out.println("Límite streams/día: " + limiteStreamsDia);
         System.out.println("Calidad 4K: " + (calidad4K ? "Sí" : "No"));
-        if (duracionHoras > 0)
+        if (duracionHoras > 0) {
             System.out.println("Duración: " + duracionHoras + " horas");
-    }
+        }
+}
 }

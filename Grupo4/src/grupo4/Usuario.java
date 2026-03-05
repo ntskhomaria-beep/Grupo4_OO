@@ -74,4 +74,5 @@ public class Usuario {
     this.contrasenia = nuevaContraseña;
     System.out.println("Contraseña actualizada correctamente.");
   }
+
 }

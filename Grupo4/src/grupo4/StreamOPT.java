@@ -11,7 +11,7 @@ public class StreamOPT {
         Scanner scanner = new Scanner(System.in);
         Sistema sistema = new Sistema();
 
-        System.out.println("===== BIENVENIDO A STREAMOPT =====");
+        System.out.println("===== BIENVENIDO A SteamOPT =====");
 
         boolean registrado = false;
         Usuario usuarioActual = null;
@@ -85,34 +85,34 @@ public class StreamOPT {
         scanner.close();
     }
 
-    // ? MÉTODO FUERA DEL MAIN PERO DENTRO DE LA CLASE
+    //métodos fuera del main (no confundir) 
     public static Suscripcion elegirPlan(Scanner scanner) {
 
 System.out.println("????????????????????????????????????????????????????????????");
 System.out.println("?                PLANES DE STREAM OPT                      ?");
 System.out.println("????????????????????????????????????????????????????????????");
 
-// Tarjeta 1
+//DEMO
 System.out.println("  [ PLAN: DEMO 72H ]");
 System.out.println("  > Horario : Acceso total por 72 horas");
 System.out.println("  > Ventajas: Prueba gratuita, 7 slots, Sin compromiso");
 System.out.println("  ----------------------------------------------------------");
 
-// Tarjeta 2
+//MENSUAL 
 System.out.println("  [ PLAN: MENSUAL ]");
 System.out.println("  > Horario : Acceso Ilimitado 24/7");
 System.out.println("  > Ventajas: Soporte prioritario, Multi-stream");
 System.out.println("  ----------------------------------------------------------");
 
-// Tarjeta 3
+//ANUAL
 System.out.println("  [ PLAN: ANUAL ]");
 System.out.println("  > Horario : Acceso Ilimitado 365 dias");
 System.out.println("  > Ventajas: Ahorro del 20%, Emblema VIP, Full HD+");
 System.out.println("  ----------------------------------------------------------");
 
-// Tarjeta 4
+//MENSUAL (OFERTA) 
 System.out.println("  [ PLAN: OFERTA FLASH ]");
-System.out.println("  > Horario : Tiempo limitado");
+System.out.println("  > Horario : Tiepmo limitado");
 System.out.println("  > Ventajas: Precio minimo historico, Premium");
 System.out.println("  ----------------------------------------------------------");
         System.out.println("");
@@ -124,7 +124,7 @@ System.out.print("\n  Selecciona una opcion (1-4): ");
 
         Suscripcion plan;
 
-        if (opcion == 1) {
+        if (opcion==1) {
             plan = new Suscripcion("DEMO 72H", 0, true, false, 7, false, 72);
         }
         else if (opcion == 2) {
