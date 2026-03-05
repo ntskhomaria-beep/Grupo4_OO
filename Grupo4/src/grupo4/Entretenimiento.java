@@ -17,24 +17,33 @@ public class Entretenimiento {
   private String empresa; 
   private double critica; 
   private String plataforma; 
-  ArrayList<String>patrocinador;
+
   
   public Scanner scanner; 
   
     public Entretenimiento(String titulo, int audiencia, String empresa,
-            double critica, String plataforma,
-            ArrayList<String> patrocinadores) {
+            double critica, String plataforma){
 
         this.titulo = titulo;
         this.audiencia = audiencia;
         this.empresa = empresa;
         this.critica = critica;
         this.plataforma = plataforma;
-        this.patrocinador = patrocinadores; 
+        
     }
   
+    public String getTitulo(){
+    return titulo;
+}
 
-  
+public String getPlataforma(){
+    return plataforma;
+}
+
+public double getCritica(){
+    return critica;
+}
+
   public double mostrarCritica(){
       return critica;
   }
@@ -43,7 +52,7 @@ public class Entretenimiento {
        scanner = new Scanner(System.in);
       System.out.println("Introduzca el nombre del patrocinador que quiera agregar: ");
       agregarP=scanner.nextLine(); 
-      patrocinador.add(agregarP); 
+     
       
   }
   
@@ -52,45 +61,21 @@ public class Entretenimiento {
                 + "\nAudiencia: " + audiencia
                 + "\nEmpresa: " + empresa
                 + "\nCrítica: " + critica
-                + "\nPlataforma: " + plataforma
-                + "\nPatrocinadores: " + patrocinador;
+                + "\nPlataforma: " + plataforma;
+
     
   }
-  
-  public void mostrarPatrocinadores(){
-      System.out.println("Patrocinadores:");
-      System.out.println();
-      System.out.println("-------------------------------------------------------------------------");
-      for (int i = 0; i < patrocinador.size(); i++) {
-System.out.println("Posición " + i + " ? " + patrocinador.get(i));
-      }
-  }
-  
-    public void eliminarPatrocinador(int posicion) {
-         scanner = new Scanner(System.in);
-        if (patrocinador.isEmpty()) {
-            System.out.println("No hay patrocinadores para eliminar.");
-            return;
-        }
-        mostrarPatrocinadores();
-        System.out.println("Elija el número del patrocinador que desea eliminar:");
-         posicion = scanner.nextInt();
-        if (posicion >= 0 && posicion < patrocinador.size()) {
-            patrocinador.remove(posicion);
-            System.out.println("Patrocinador eliminado correctamente.");
-        } else {
-            System.out.println("Posición no válida.");
-        }
+
         
-  }
+  
     @Override
     public String toString() {
         return "Título: " + titulo
                 + "\nAudiencia: " + audiencia
                 + "\nEmpresa: " + empresa
                 + "\nCrítica: " + critica
-                + "\nPlataforma: " + plataforma
-                + "\nPatrocinadores: " + patrocinador;
+                + "\nPlataforma: " + plataforma;
+
     }
 }
   

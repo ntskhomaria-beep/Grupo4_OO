@@ -13,20 +13,22 @@ public class Videojuegos extends Entretenimiento {
     private String categoria;
     private String clasifiEdad;
     private double costo;
+    private String categorias; 
     private boolean microtransacciones;
     Random ale = new Random();
     int num = ale.nextInt(10) + 1;
 
     public Videojuegos(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinadores, String franquicia,
-            String categoria, String ClasifiEdad, double costo,
+            String categoria, String ClasifiEdad, double costo, String categorias,
             boolean microtransacciones) {
 
-        super(titulo, audiencia, empresa, costo, plataforma, patrocinadores);
+        super(titulo, audiencia, empresa, costo, plataforma);
         this.franquicia = franquicia;
         this.categoria = categoria;
         this.clasifiEdad = ClasifiEdad;
         this.costo = costo;
         this.microtransacciones = microtransacciones;
+        this.categorias=categorias; 
     }
 
     public String mostrarCategoria() {

@@ -14,7 +14,7 @@ public class Pelicula extends Entretenimiento{
     ArrayList<String>actores;
     
     public Pelicula(String titulo, int audiencia, String empresa, String valoracion, String plataforma, ArrayList<String> patrocinador, double duracion, String categorias, String sinopsis, ArrayList<String>actor){
-        super(titulo, audiencia, empresa, duracion, plataforma, patrocinador);
+        super(titulo, audiencia, empresa, duracion, plataforma);
         this.duracion=duracion;
         this.categorias=categorias;
         this.sinopsis=sinopsis;

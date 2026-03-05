@@ -20,12 +20,12 @@ public class Series extends Entretenimiento {
     private String adaptacion; 
 
     public Series(String titulo, int audiencia, String empresa, double critica,
-                  String plataforma, ArrayList<String> patrocinadores,
+                  String plataforma,
                   int temporadas, int capitulos, String genero,
                   ArrayList<String> actores, String clasificacionEdad,
                   String adaptacion) {
 
-        super(titulo, audiencia, empresa, critica, plataforma, patrocinadores);
+        super(titulo, audiencia, empresa, critica, plataforma);
 
         this.temporadas = temporadas;
         this.capitulos = capitulos;

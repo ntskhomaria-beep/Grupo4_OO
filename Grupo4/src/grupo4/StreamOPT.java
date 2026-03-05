@@ -3,10 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package grupo4;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class StreamOPT {
+    
+    
 
     public static void main(String[] args) {
+ArrayList<Pelicula> peliculas = new ArrayList<>();
+ArrayList<Series> series = new ArrayList<>();
+ArrayList<Videojuegos> videojuegos = new ArrayList<>();
+
+
 
         Scanner scanner = new Scanner(System.in);
         Sistema sistema = new Sistema();
@@ -38,7 +46,7 @@ public class StreamOPT {
             usuarioActual = new Usuario(id, pass, nombre, gmail);
             registrado = true;
         }
-
+        
         System.out.println("\nBienvenido a StreamOPT!");
         System.out.println("- - - - - - - - - - - - -");
         System.out.println("");
