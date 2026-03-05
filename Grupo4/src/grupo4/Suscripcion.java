@@ -45,7 +45,7 @@ public class Suscripcion {
     }
 
    
-    public void mostrarInfo() {
+    public void mostrarSuscripcion() {
         System.out.println("Plan: " + nombre);
         System.out.println("Precio: $" + precio);
         System.out.println("Anuncios: " + (anuncios ? "Sí" : "No"));
