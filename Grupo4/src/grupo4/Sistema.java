@@ -26,11 +26,13 @@ public class Sistema {
             if (u.getId().equals(id) && u.getContrasenia().equals(contrasenia)) {
                 System.out.println("Bienvenido, " +id + "!");
                 return true;
+            } else {
+                System.out.println("Usuario o contraseña incorrectos.");
+                intentos-=1;
+                System.out.println("Te quedan: " + intentos);
             }
         }
-        System.out.println("Usuario o contraseña incorrectos.");
-        System.out.println("Vuelve a intentarlo.");
-        System.out.println("Te quedan: ");
+        
         return false;
     }
  
