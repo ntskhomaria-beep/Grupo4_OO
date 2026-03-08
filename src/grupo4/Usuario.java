@@ -8,16 +8,13 @@ public Scanner scanner;
 
     private String id;
     private String contrasenia;
-    private String nombre;
-    private String gmail;
     private Suscripcion suscripcion;
+    private CuentaBancaria cuenta;
     private ArrayList<Entretenimiento> historialStreams = new ArrayList<>();
 
-    public Usuario(String id, String contrasenia, String nombre, String gmail) {
-        this.id=id;
-        this.contrasenia=contrasenia;
-        this.nombre=nombre;
-        this.gmail=gmail;
+  public Usuario(String id, String contrasenia) {
+        this.id = id;
+        this.contrasenia = contrasenia;
     }
 
     public String getId() {
@@ -28,22 +25,6 @@ public Scanner scanner;
         return contrasenia;
     }
 
-   
-    public String getNombre(){
-        return nombre;
-    }
-   
-    public void setNombre(String nombre){
-        this.nombre=nombre;
-    }
-   
-    public String getGmail(){
-        return gmail;
-    }
-   
-    public void setGmail(String gmail){
-        this.gmail=gmail;
-    }
     public void verStream() {
     System.out.println("Estás viendo contenido en streaming...");
 }
@@ -56,9 +37,17 @@ public Suscripcion getSuscripcion() {
     return suscripcion;
 }
    
+public void setCuenta(CuentaBancaria cuenta) {
+    this.cuenta = cuenta;
+}
 
-    public boolean iniciarSesion(String id, String contraseniaa) {
-    if (id.equals(this.nombre) && contraseniaa.equals(this.contrasenia)) {
+
+public CuentaBancaria getCuenta() {
+    return this.cuenta;
+}
+
+   public boolean iniciarSesion(String id, String contrasenia) {
+    if (id.equals(this.id) && contrasenia.equals(this.contrasenia)) {
         System.out.println("Usuario correcto.");
         return true;
     } else {
@@ -66,6 +55,8 @@ public Suscripcion getSuscripcion() {
         return false;
     }
 }
+   
+   
    
     public void cerrarSesion(){
         System.out.println("Sesion cerrada.");

@@ -9,31 +9,22 @@ import java.util.ArrayList;
  *
  * @author n.tskhomaria
  */
+
+
 public class Sistema {
-    private ArrayList<Usuario>usuarios=new ArrayList<>();
-   
-    public void registrarUsuario(String id, String contrasenia, String nombre, String gmail) {
-        Usuario nuevo = new Usuario(id, contrasenia, nombre, gmail);
+    private ArrayList<Usuario> usuarios = new ArrayList<>();
+
+    public void registrarUsuario(String id, String contrasenia){
+        Usuario nuevo = new Usuario(id, contrasenia);
         usuarios.add(nuevo);
         System.out.println("Se ha registrado correctamente.");
     }
-   
 
- public boolean iniciarSesion(String id, String contrasenia, int intentos) {
-     intentos=4;
-     
-        for (Usuario u : usuarios) {
-            if (u.getId().equals(id) && u.getContrasenia().equals(contrasenia)) {
-                System.out.println("Bienvenido, " +id + "!");
-                return true;
-            } else {
-                System.out.println("Usuario o contraseña incorrectos.");
-                intentos-=1;
-                System.out.println("Te quedan: " + intentos);
-            }
+    // Opcional: buscar usuario por id
+    public Usuario buscarUsuario(String id){
+        for(Usuario u : usuarios){
+            if(u.getId().equals(id)) return u;
         }
-        
-        return false;
+        return null;
     }
- 
 }

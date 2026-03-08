@@ -45,6 +45,10 @@ public class Suscripcion {
     public boolean getCalidad4K() {
         return calidad4K;
     }
+    
+    public double getPrecio() {
+    return precio;
+}
 
    
     public void mostrarSuscripcion() {
