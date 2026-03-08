@@ -10,6 +10,7 @@ public Scanner scanner;
     private String contrasenia;
     private String nombre;
     private String gmail;
+    private Suscripcion suscripcion;
     private ArrayList<Entretenimiento> historialStreams = new ArrayList<>();
 
     public Usuario(String id, String contrasenia, String nombre, String gmail) {
@@ -43,6 +44,17 @@ public Scanner scanner;
     public void setGmail(String gmail){
         this.gmail=gmail;
     }
+    public void verStream() {
+    System.out.println("Estás viendo contenido en streaming...");
+}
+    
+    public void setSuscripcion(Suscripcion suscripcion) {
+    this.suscripcion = suscripcion;
+}
+
+public Suscripcion getSuscripcion() {
+    return suscripcion;
+}
    
 
     public boolean iniciarSesion(String id, String contraseniaa) {

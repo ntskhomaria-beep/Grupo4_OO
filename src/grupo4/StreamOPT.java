@@ -77,8 +77,8 @@ ArrayList<Videojuegos> videojuegos = new ArrayList<>();
                     break;
 
                 case 2:
-                    usuarioActual.getSuscripcion().mostrarInfo();
-                    break;
+usuarioActual.getSuscripcion().mostrarSuscripcion();
+break;
 
                 case 3:
                     System.out.println("Sesión cerrada.");
